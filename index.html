@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Project</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: #ffd9da">Color Palette</h1>
+      <input type="text" id="color-input" placeholder="Enter a color" />
+      <div class="control">
+        <button id="addBtn">Add</button>
+        <span id="counter">0</span>
+        <button id="clearBtn">Clear</button>
+      </div>
+    </header>
+    <main id="list">
+      <div class="item"></div>
+    </main>
+    <script>
+      //Declare variables
+      const add = document.getElementById("add");
+      const clear = document.getElementById("clear");
+      const counter = document.getElementById("counter");
+      const list = document.getElementById("list");
+      const input = document.getElementById("color-input");
+
+      let count = 0;
+      //creating an event listener for the buttons
+      addBtn.addEventListener("click", addItem);
+      clearBtn.addEventListener("click", clearList);
+      //function to add an item to the list
+      function addItem() {
+        const item = input.value;
+        if (item.length > 0) {
+          //list.innerHTML += `<div class="item" onclick= "strike(this)">${item}</div>`;
+          items.push(
+            `<div class="item" style="background-color: ${color}">${color}</div>`
+          );
+          input.value = "";
+          updateCounter();
+        }
+      }
+      function clearList() {
+        list = [];
+        listElem.innerHTML = list.join("");
+        updateCounter();
+      }
+      function updateCounter() {
+        // Get the number of items in the list
+        const listLen = list.length;
+        //counterElem.innerHTML = list.length;
+        counterElem.innerText = `Count: ${listLen}`;
+      }
+    </script>
+  </body>
+</html>
