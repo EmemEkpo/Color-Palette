@@ -1,14 +1,11 @@
 * {
   box-sizing: border-box;
 }
-body {
-  height: 800px;
-  width: 800px;
-}
+
 header {
   background-color: #30343f;
-  width: 1700px;
-  height: 150px;
+  width: 100%;
+  height: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +15,7 @@ input {
   width: 300px;
   height: 50px;
   background-color: #ffd9da;
-  border: 1px solid #89023e;
+  border: 2px solid #89023e;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #979292;
   padding: 10px;
@@ -57,8 +54,8 @@ input {
   color: #ffd9da;
 }
 main {
-  width: 1200px;
-  height: 600px;
+  width: 100%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,13 +64,11 @@ main {
 .list {
   display: flex;
   justify-content: space-evenly;
-  width: 1200px;
-  height: 600px;
+  width: 100%;
 }
 .item {
-  width: 400px;
+  width: 300px;
   height: 300px;
-  border: #979292 1px solid;
   padding: 10px;
   margin: 10px;
 }
