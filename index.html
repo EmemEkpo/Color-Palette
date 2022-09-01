@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1 style="color: #ffd9da">Color Palette</h1>
-      <input type="text" id="color-input" placeholder="Enter a color" />
+      <input type="text" id="input" placeholder="Enter a color" />
       <div class="control">
         <button id="addBtn">Add</button>
         <span id="counter">0</span>
@@ -22,11 +22,12 @@
     </main>
     <script>
       //Declare variables
-      const add = document.getElementById("add");
-      const clear = document.getElementById("clear");
-      const counter = document.getElementById("counter");
-      const list = document.getElementById("list");
-      const input = document.getElementById("color-input");
+      let list = [];
+      const addBtnElem = document.getElementById("add");
+      const clearBtnElem = document.getElementById("clear");
+      const counterElem = document.getElementById("counter");
+      const listElem = document.getElementById("list");
+      const inputElem = document.getElementById("input");
 
       let count = 0;
       //creating an event listener for the buttons
@@ -34,16 +35,18 @@
       clearBtn.addEventListener("click", clearList);
       //function to add an item to the list
       function addItem() {
-        const item = input.value;
+        const item = inputElem.value;
         if (item.length > 0) {
           //list.innerHTML += `<div class="item" onclick= "strike(this)">${item}</div>`;
-          items.push(
+          list.push(
             `<div class="item" style="background-color: ${color}">${color}</div>`
           );
-          input.value = "";
+          listElem.innerHTML = list.join("");
+          inputElem.value = "";
           updateCounter();
         }
       }
+      console.log(item);
       function clearList() {
         list = [];
         listElem.innerHTML = list.join("");
