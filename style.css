@@ -5,7 +5,7 @@
 header {
   background-color: #30343f;
   width: 100%;
-  height: 15%;
+  height: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,8 +18,8 @@ input {
   border: 2px solid #89023e;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #979292;
-  padding: 10px;
-  margin: 5px;
+  padding: 5px;
+  margin: 2px;
 }
 .control {
   display: flex;
@@ -33,7 +33,7 @@ input {
   color: #ffd9da;
   cursor: pointer;
   border: none;
-  padding: 5px;
+  padding: 10px;
 }
 #addBtn:hover {
   background-color: #ffd9da;
@@ -44,7 +44,7 @@ input {
   color: #89023e;
   cursor: pointer;
   border: none;
-  padding: 5px;
+  padding: 10px;
 }
 #clearBtn:hover {
   background-color: #89023e;
@@ -55,20 +55,14 @@ input {
 }
 main {
   width: 100%;
-  height: 85%;
+  height: 90%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.list {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  flex-wrap: wrap;
 }
 .item {
-  width: 300px;
-  height: 300px;
+  flex-basis: 33.1%;
+  width: 30%;
+  height: 120px;
   padding: 10px;
-  margin: 10px;
+  margin: 1px;
 }

@@ -17,27 +17,25 @@
         <button id="clearBtn">Clear</button>
       </div>
     </header>
-    <main id="list">
-      <div class="item"></div>
-    </main>
+    <main id="list"></main>
     <script>
       //Declare variables
       let list = [];
-      const addBtnElem = document.getElementById("add");
-      const clearBtnElem = document.getElementById("clear");
+      let counter = 0;
+      const addBtnElem = document.getElementById("addBtn");
+      const clearBtnElem = document.getElementById("clearBtn");
       const counterElem = document.getElementById("counter");
       const listElem = document.getElementById("list");
       const inputElem = document.getElementById("input");
 
-      let count = 0;
       //creating an event listener for the buttons
-      addBtn.addEventListener("click", addItem);
+      addBtn.addEventListener("click", addColor);
       clearBtn.addEventListener("click", clearList);
       //function to add an item to the list
-      function addItem() {
-        const item = inputElem.value;
-        if (item.length > 0) {
-          //list.innerHTML += `<div class="item" onclick= "strike(this)">${item}</div>`;
+      function addColor() {
+        const color = inputElem.value;
+        if (color.length > 0) {
+          //add the color to the list
           list.push(
             `<div class="item" style="background-color: ${color}">${color}</div>`
           );
@@ -46,16 +44,16 @@
           updateCounter();
         }
       }
-      console.log(item);
+      //function to clear the list
       function clearList() {
         list = [];
         listElem.innerHTML = list.join("");
         updateCounter();
       }
+      //function to update the counter
       function updateCounter() {
         // Get the number of items in the list
         const listLen = list.length;
-        //counterElem.innerHTML = list.length;
         counterElem.innerText = `Count: ${listLen}`;
       }
     </script>
